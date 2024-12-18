@@ -1,0 +1,6 @@
+h2 {
+    color: brown;
+    margin: 20px;
+}
+
+/* <link rel="stylesheet" href="{% static 'tech_gadgets/style.css' %}"> */
