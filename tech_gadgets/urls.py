@@ -13,8 +13,7 @@ urlpatterns = [
     path('gadget/<int:gadget_id>', single_gadget_int_view),
     path('gadget/<slug:gadget_slug>', GadgetView.as_view(), name="gadget_slug_url"),
 
-    path('manufacturer/', ManufacturerView.as_view()),
-    path('manufacturer/<slug:manufacturer_slug>', ManufacturerView.as_view(), name="manufacturer_slug_url"),
+    path('manufacturer/', RedirectToManufacturertView.as_view()),
     path('manufacturer/<int:manufacturer_id>', single_manufacturer_int_view),
-    path('<int:manufacturer_id>', RedirectToManufacturertView.as_view()),
+    path('manufacturer/<slug:manufacturer_slug>', ManufacturerView.as_view(), name="manufacturer_slug_url"),
 ]
